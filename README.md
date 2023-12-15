@@ -5,7 +5,7 @@
 ````
 def Model(num_classes=4):
     encoder = coat_lite_medium()
-    checkpoint = "/mnt/prj001/Bibhabasu_Mohapatra/downloads/coat_lite_medium_384x384_f9129688.pth"
+    checkpoint = "downloads/coat_lite_medium_384x384_f9129688.pth"
     checkpoint = torch.load(checkpoint, map_location=lambda storage, loc: storage)
     state_dict = checkpoint["model"]
     encoder.load_state_dict(state_dict, strict=False)
